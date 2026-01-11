@@ -1,0 +1,7 @@
+{
+  "name": "ChatTranslate",
+  "description": "A beautiful, pastel-themed AI translation app powered by Google Gemini.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
