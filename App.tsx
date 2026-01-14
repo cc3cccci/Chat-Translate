@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [history, setHistory] = useState<TranslationItem[]>([]);
   const [savedPhrases, setSavedPhrases] = useState<TranslationItem[]>([]);
-  const [selectedModel, setSelectedModel] = useState<ModelType>('deepseek-ai/DeepSeek-V3');
+  const [selectedModel, setSelectedModel] = useState<ModelType>('gemini-2.0-flash-exp');
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Model Management
@@ -30,6 +30,7 @@ const App: React.FC = () => {
       return JSON.parse(saved);
     }
     return [
+      { id: 'gemini-2.0-flash-exp', name: 'Gemini 2.0 Flash' },
       { id: 'deepseek-ai/DeepSeek-V3', name: 'DeepSeek V3' }
     ];
   });
