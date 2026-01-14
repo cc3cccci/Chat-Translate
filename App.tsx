@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [history, setHistory] = useState<TranslationItem[]>([]);
   const [savedPhrases, setSavedPhrases] = useState<TranslationItem[]>([]);
-  const [selectedModel, setSelectedModel] = useState<ModelType>('gemini-2.0-flash-exp');
+  const [selectedModel, setSelectedModel] = useState<ModelType>('deepseek-ai/DeepSeek-V3');
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Model Management
@@ -57,12 +57,12 @@ const App: React.FC = () => {
 
   const [apiBaseUrl, setApiBaseUrl] = useState(() => {
     const stored = localStorage.getItem("gemini_api_base_url");
-    return stored !== null ? stored : (import.meta.env.VITE_API_BASE_URL as string) || "";
+    return stored !== null ? stored : (import.meta.env.VITE_API_BASE_URL as string) || "https://api.siliconflow.cn/v1";
   });
 
   const [apiProtocol, setApiProtocol] = useState<ApiProtocol>(() => {
     const stored = localStorage.getItem("api_protocol");
-    return stored ? (stored as ApiProtocol) : (import.meta.env.VITE_API_PROTOCOL as ApiProtocol) || 'gemini';
+    return stored ? (stored as ApiProtocol) : (import.meta.env.VITE_API_PROTOCOL as ApiProtocol) || 'openai';
   });
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
