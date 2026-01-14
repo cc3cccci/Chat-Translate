@@ -394,7 +394,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     <label className="block text-xs font-bold text-text-light dark:text-slate-400 mb-1.5 uppercase tracking-wider">API Key</label>
                     <input
                       type="password"
-                      placeholder="Current defaults"
+                      placeholder="Leave empty to use system default"
                       value={localApiKey}
                       onChange={(e) => setLocalApiKey(e.target.value)}
                       className="w-full bg-gray-50 dark:bg-slate-700/50 border border-gray-100 dark:border-slate-600 rounded-xl px-3 py-2 text-sm text-text-dark dark:text-white focus:ring-2 focus:ring-accent-sky/50 focus:border-accent-sky outline-none transition-all placeholder-gray-400 dark:placeholder-slate-500"

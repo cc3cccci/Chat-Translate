@@ -331,7 +331,7 @@ const App: React.FC = () => {
         onToggleAutoTranslate={() => setAutoTranslate(!autoTranslate)}
         debounceTime={debounceTime}
         onChangeDebounceTime={setDebounceTime}
-        apiKey={finalApiKey}
+        apiKey={apiKey}
         apiBaseUrl={apiBaseUrl}
         apiProtocol={apiProtocol}
         onSaveApiSettings={handleSaveApiSettings}
