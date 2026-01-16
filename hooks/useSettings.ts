@@ -5,7 +5,7 @@ import { encryptData, decryptData } from '../utils/crypto';
 export const useSettings = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [autoTranslate, setAutoTranslate] = useState(true);
-    const [debounceTime, setDebounceTime] = useState(800);
+    const [debounceTime, setDebounceTime] = useState(5000);
 
     const [apiKey, setApiKey] = useState(() => {
         const stored = localStorage.getItem("gemini_api_key");

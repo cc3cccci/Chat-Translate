@@ -348,7 +348,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 <input
                   type="range"
                   min="300"
-                  max="3000"
+                  max="30000"
                   step="100"
                   value={debounceTime}
                   onChange={(e) => onChangeDebounceTime(Number(e.target.value))}
